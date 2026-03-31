@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form - TahanTempur Northrop–McDonnell Douglas YF-23</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bs-body-bg: #1c1f24;
+            --bs-body-color: #e3d6c0;
+            --bs-primary: #d94f2a;
+            --bs-primary-rgb: 217, 79, 42;
+            --bs-secondary: #3a3f45;
+            --bs-secondary-rgb: 58, 63, 69;
+        }
+
+        .navbar .nav-link.active {
+            color: white !important;
+            font-weight: 600;
+        }
+       
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+       
+        .container-2 {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            padding-top: 1vh;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            padding-bottom: 2vh;
+        }
+       
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 26px;
+        }
+       
+        .form-group {
+            margin-bottom: 15px;
+        }
+       
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+            font-size: 13px;
+        }
+       
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+       
+        input:focus, select:focus {
+            outline: none;
+            border-color: #333;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+       
+        button {
+            width: 100%;
+            padding: 11px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+       
+        button:hover {
+            background: #333;
+        }
+       
+        .required::after {
+            content: " *";
+            color: red;
+        }
+       
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">TahanTempur</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Buy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-2 py-5 mt-5">
+        <h1>Registration Form</h1>
+        <form id="form">
+            <div class="form-group">
+                <label for="name" class="required">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="dob" class="required">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="country" class="required">Country of Residence</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BR">Brazil</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="CA">Canada</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CO">Colombia</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="DK">Denmark</option>
+                    <option value="EG">Egypt</option>
+                    <option value="EE">Estonia</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GR">Greece</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JP">Japan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MX">Mexico</option>
+                    <option value="MA">Morocco</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NO">Norway</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russia</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="KR">South Korea</option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="TW">Taiwan</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TR">Turkey</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="VN">Vietnam</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="citizenship" class="required">Citizenship</label>
+                <select id="citizenship" name="citizenship" required>
+                    <option value="">Select Citizenship</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BR">Brazil</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="CA">Canada</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CO">Colombia</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="DK">Denmark</option>
+                    <option value="EG">Egypt</option>
+                    <option value="EE">Estonia</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GR">Greece</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JP">Japan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MX">Mexico</option>
+                    <option value="MA">Morocco</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NO">Norway</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russia</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="KR">South Korea</option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="TW">Taiwan</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TR">Turkey</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="VN">Vietnam</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <label for="passport" class="required">Passport Number</label>
+                <input type="text" id="passport" name="passport" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="job">Current Job</label>
+                <input type="text" id="job" name="job">
+            </div>
+           
+            <div class="form-group">
+                <label for="tel" class="required">Telephone</label>
+                <input type="tel" id="tel" name="tel" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="amount" class="required">Amount</label>
+                <input type="number" id="amount" name="amount" step="0.01" min="0" required>
+            </div>
+           
+            <button type="submit">Register</button>
+        </form>
+    </div>
+   
+    <script>
+        document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration submitted successfully!');
+            console.log({
+                name: document.getElementById('name').value,
+                dob: document.getElementById('dob').value,
+                country: document.getElementById('country').value,
+                citizenship: document.getElementById('citizenship').value,
+                passport: document.getElementById('passport').value,
+                job: document.getElementById('job').value,
+                tel: document.getElementById('tel').value,
+                email: document.getElementById('email').value,
+                amount: document.getElementById('amount').value
+            });
+        });
+    </script>
+</body>
+</html>
